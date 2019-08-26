@@ -5,10 +5,11 @@ menu: menu.html
 
 #  CMD / Powershell / WSL 环境美化 (绣花)
 
+(Draft)
+
 ## 为什么需要美化？
 
-Windows默认的蓝底白字的Powershell（图一），黑底白字的CMD（图二）和WSL（图三）观感极差，
-再配上默认的楷体等非等宽字体，以及zsh中的powerline字符乱码（图三），在日常使用中非常不友好。
+Windows默认的蓝底白字的Powershell（图一），黑底白字的CMD（图二）和WSL（图三）体验极差，再配上默认的楷体等非等宽字体，以及经常出现的字符乱码（图三），在日常使用中非常不友好。
 
 ![powershell](./powershell.png)
 （图一）
@@ -27,10 +28,10 @@ Windows默认的蓝底白字的Powershell（图一），黑底白字的CMD（图
 ## 使用cmder美化界面
 
 首先，解决界面不够美观的方法很简单，只需要一个软件：cmder。
-cmder基于另一款console模拟器ConEmu (https://conemu.github.io/)，并进步一加以改进，
-在官网 (https://cmder.net/) 下载一个完整版解压后即可使用，可以按照自己的需求进行一些配置。
 
-配置时最好用管理员身份运行cmder，否则配置可能无法写入系统，在Settings中，找到Startup - Tasks，
+cmder基于另一款console模拟器ConEmu (https://conemu.github.io/)，并进步一加以改进，在官网 (https://cmder.net/) 下载一个完整版解压后即可使用，可以按照自己的需求进行一些配置。
+
+配置时推荐使用管理员身份运行cmder，否则配置可能无法写入系统，在Settings中，找到Startup - Tasks，
 此时cmder已经自动生成了系统中所有支持shell的列表，如图五：
 
 ![tasks](./tasks.png)
@@ -64,3 +65,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ![zshrc](./zshrc.png)
 （图七：选择agnoster作为默认主题）
+
+同时，也需要安装Powerline特殊字体解决乱码问题。下载 Powerline Fonts (https://github.com/powerline/fonts) 中任意字体并双击安装，然后在 General - Fonts 中选择后缀为 "for Powerline" 的字体即可使用（如图八）。
+
+![fonts](./fonts.png)
+（图八：设置Powwerline字体）
+
+注：在Linux / Mac OS中安装zsh后，也需要安装Powwerline字体。
