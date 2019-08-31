@@ -21,7 +21,7 @@ Shell通常指的是命令行界面的解析器，用于用户和操作系统的
 
 > [Zsh](https://www.zsh.org/) (Z Shell) 由保罗·弗斯塔德（Paul Falstad）于1990年在普林斯顿大学求学时编写了初版，名称zsh源于耶鲁大学教授邵中（Zhong Shao，后转为普林斯顿大学教授) — 保罗将教授的用户名"zsh"作为此Shell的名称。
 
-Zsh提供了bash的大多数功能，并新增了许多新特性：
+Zsh提供了bash的大多数功能，并新增了许多[新特性](https://zh.wikipedia.org/wiki/Z_shell)：
 + 可帮助用户键入常用命令选项及参数的可编程命令行补全功能，自带对数百条命令的支持
 + 可与任意Shell共享命令历史
 + 可在无需运行外部程序（如find）的情况下通过文件扩展匹配文件
@@ -34,7 +34,7 @@ Zsh提供了bash的大多数功能，并新增了许多新特性：
 
 GitHub上的“[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)”库收集Z shell的第三方插件及主题，并通过简易的配置方式提供一个美观，易用的shell。如下图所示的agnoster主题提供了大部分日常使用所需要显示的内容。
 
-![oh-my-zsh](https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/screenshot.pn)
+![oh-my-zsh](https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/screenshot.png)
 
 ## 安装
 
@@ -135,7 +135,7 @@ plugins=(
 
 安装Powerline特殊字体是为了解决以下一些utf-8字符的乱码问题：
 
-![characters](./characters.png)
+![characters](https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/characters.png)
 
 字体安装成功后，在Terminal或Console中将字体替换为包含“Powerline”的字体就能正确显示以上特殊字符了。
 
