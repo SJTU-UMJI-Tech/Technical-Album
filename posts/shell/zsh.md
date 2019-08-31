@@ -34,7 +34,7 @@ Zsh提供了bash的大多数功能，并新增了许多新特性：
 
 GitHub上的“[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)”库收集Z shell的第三方插件及主题，并通过简易的配置方式提供一个美观，易用的shell。如下图所示的agnoster主题提供了大部分日常使用所需要显示的内容。
 
-![oh-my-zsh](./oh-my-zsh.png)
+![oh-my-zsh](https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/screenshot.pn)
 
 ## 安装
 
