@@ -43,7 +43,7 @@ cmder基于另一款console模拟器ConEmu (https://conemu.github.io/)，并进�
 如果需要配置默认启动的shell，应该在第一个General选项中选择（图六），
 同时也可以设置语言（作为JI的学生应该使用默认的英文就好了），
 字体（Fonts，建议换为Poweline字体，详见后文）
-和主题（Features - Colors，图四为Solarized主题）
+和主题（Features - Colors，图四为Solarized主题）。
 
 ![general](./general.png)
 （图六）
