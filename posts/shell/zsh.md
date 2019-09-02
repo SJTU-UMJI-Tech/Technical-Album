@@ -9,15 +9,15 @@ menu: menu.html
 
 ### 什么是Shell？
 
-很多人认为Windows中的CMD / Powershell，Mac OS中的Terminal和各种Linux桌面环境中各不相同的命令行界面都是Shell。事实上，它们一般被称为Terminal（终端）或Console（控制台），而Shell是其中的一个核心组件。
+很多人认为Windows中的CMD / Powershell，macOS中的Terminal和各种Linux桌面环境中各不相同的命令行界面都是Shell。事实上，它们一般被称为Terminal（终端）或Console（控制台），而Shell是其中的一个核心组件。
 
-Shell通常指的是命令行界面的解析器，用于用户和操作系统的直接交互。比如在大部分基于Unix的操作系统（如Linux / Mac OS）中，默认使用的shell是bash。而Windows不基于Unix，使用微软自己定义的CMD / Powershell作为Shell（Windows中没有特别区分Shell和Terminal）。
+Shell通常指的是命令行界面的解析器，用于用户和操作系统的直接交互。比如在大部分基于Unix的操作系统（如Linux / macOS）中，默认使用的shell是bash。而Windows不基于Unix，使用微软自己定义的CMD / Powershell作为Shell（Windows中没有特别区分Shell和Terminal）。
 
 这篇教程中，我们主要关注怎么将基于Unix的操作系统中默认的bash替换为zsh，并使用oh-my-zsh框架对zsh进行快速配置。使用Windows的用户可以使用WSL（Windows Subsystem for Linux）进行相似的配置。
 
-注：在下一代macOS Catalina中，Zsh将替代bash成为默认shell。
+注：在下一代macOS Catalina中，zsh将替代bash成为默认shell。
 
-### 什么是Zsh？
+### 什么是zsh？
 
 > [Zsh](https://www.zsh.org/) (Z Shell) 由保罗·弗斯塔德（Paul Falstad）于1990年在普林斯顿大学求学时编写了初版，名称zsh源于耶鲁大学教授邵中（Zhong Shao，后转为普林斯顿大学教授) — 保罗将教授的用户名"zsh"作为此Shell的名称。
 
@@ -56,15 +56,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 
-3. 输入密码将默认的登录shell改为zsh。
-5. 在`~/.zshrc`中修改配置文件。
-
-
-### Mac OS
-
-1. 确保系统中已经安装了zsh，git和curl，已经安装brew的用户可以运行：
+3. 在安装过程中，会提示输入密码将默认的登录shell改为zsh。如果没有成功，可以在安装后运行
 ```bash
-brew install zsh git curl
+chsh -s /bin/zsh
+```
+
+
+4. 在`~/.zshrc`中修改配置文件。
+
+
+### macOS
+
+1. 安装Xcode命令行工具获得git（如果提示已安装可以跳过此步）：
+```bash
+xcode-select --install
 ```
 
 
@@ -81,20 +86,32 @@ rm -rf fonts
 ```
 
 
-2. 下载并运行oh-my-zsh安装脚本：
+3. 下载并运行oh-my-zsh安装脚本：
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 
-3. 输入密码将默认的登录shell改为zsh。
-4. 在`~/.zshrc`中修改配置文件。
+4. 在安装过程中，会提示输入密码将默认的登录shell改为zsh。如果没有成功，可以在安装后运行
+```bash
+chsh -s /bin/zsh
+```
+
+
+5. 在`~/.zshrc`中修改配置文件。
 
 ## 配置
 
+成功安装oh-my-zsh后，会在home目录中自动生成`.zshrc`文件，包含了一些默认配置。
+修改这个文件后，需要重启Terminal，或者运行以下命令载入配置文件：
+```bash
+source ~/.zshrc
+```
+
 ### 主题
 
-成功安装oh-my-zsh后，会在home目录中自动生成`.zshrc`文件，包含了一些默认配置，比如
+在默认的`.zshrc`文件的前几行可以设置主题：
+
 ```bash
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -133,7 +150,7 @@ plugins=(
 
 ### Powerline字体
 
-安装Powerline特殊字体是为了解决以下一些utf-8字符的乱码问题：
+安装Powerline特殊字体是为了解决以下一些utf-8字符的乱码问题（可以自己输入检验当前字体是否支持Powerline）：
 
 ![characters](https://raw.githubusercontent.com/agnoster/agnoster-zsh-theme/master/characters.png)
 
